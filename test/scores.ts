@@ -2,25 +2,85 @@ const { JsonRpcProvider } = require('@ethersproject/providers');
 const snapshot = require('../').default;
 const networks = require('../src/networks.json');
 
-const space = 'aragon';
+const space = 'ocean';
 const network = '1';
 const strategies = [
   {
     name: 'erc20-balance-of',
     params: {
-      address: '0xa117000000f279D81A1D3cc75430fAA017FA5A2e',
-      symbol: 'ANT',
+      symbol: 'OCEAN',
+      address: '0x967da4048cD07aB37855c090aAF366e4ce1b9F48',
       decimals: 18
     }
   },
   {
-    name: 'balancer',
+    name: 'ocean-marketplace',
     params: {
-      address: '0xa117000000f279D81A1D3cc75430fAA017FA5A2e',
-      symbol: 'ANT BPT'
+      symbol: 'OCEAN',
+      address: '0x967da4048cD07aB37855c090aAF366e4ce1b9F48',
+      decimals: 18
+    }
+  },
+  {
+    name: 'sushiswap',
+    params: {
+      symbol: 'OCEAN',
+      address: '0x967da4048cD07aB37855c090aAF366e4ce1b9F48',
+      decimals: 18
+    }
+  },
+  {
+    name: 'uniswap',
+    params: {
+      symbol: 'OCEAN',
+      address: '0x967da4048cD07aB37855c090aAF366e4ce1b9F48',
+      decimals: 18
+    }
+  },
+  {
+    name: 'contract-call',
+    params: {
+      address: '0x9712Bb50DC6Efb8a3d7D12cEA500a50967d2d471',
+      args: [
+        '%{address}',
+        '0xCDfF066eDf8a770E9b6A7aE12F7CFD3DbA0011B5',
+        '0x967da4048cD07aB37855c090aAF366e4ce1b9F48'
+      ],
+      decimals: 18,
+      symbol: 'OCEAN',
+      methodABI: {
+        inputs: [
+          {
+            internalType: 'address',
+            name: 'provider',
+            type: 'address'
+          },
+          {
+            internalType: 'address',
+            name: 'poolToken',
+            type: 'address'
+          },
+          {
+            internalType: 'address',
+            name: 'reserveToken',
+            type: 'address'
+          }
+        ],
+        name: 'totalProviderAmount',
+        outputs: [
+          {
+            internalType: 'uint256',
+            name: '',
+            type: 'uint256'
+          }
+        ],
+        stateMutability: 'view',
+        type: 'function'
+      }
     }
   }
 ];
+
 const addresses = [
   '0x37Bf78fA8853CEE7df39280e70e38f3e163E44c4',
   '0xdD36C6C74abd4feF4EbCFB42D4622435D5f2c5f0',
