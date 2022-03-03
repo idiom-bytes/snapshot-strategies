@@ -10,6 +10,16 @@
         "registry": "0xc37F8341Ac6e4a94538302bCd4d49Cf0852D30C0",
         "symbol": "OCEAN",
         "strategies": {
+          "56": [
+            {
+              "name": "erc20-balance-of",
+              "params": {
+                "symbol": "OCEAN",
+                "address": "0xDCe07662CA8EbC241316a15B611c89711414Dd1a",
+                "decimals": 18
+              }
+            }
+          ],
           "137": [
             {
               "name": "erc20-balance-of",
@@ -133,7 +143,13 @@
       "0xB9b14C4d0cbc18FC5f54701D578e85968cf19FD5",
       "0xceE1C921067E5fe65CD71fb8c0627d86Ce91d746",
       "0xde1E6A7ED0ad3F61D531a8a78E83CcDdbd6E0c49",
-      "0x830dff6a094b417ff5a78f989054a873dfd8fa2b"
+      "0x830dff6a094b417ff5a78f989054a873dfd8fa2b",
+      "0xDCe07662CA8EbC241316a15B611c89711414Dd1a",
+      "0x4B5170E4014db8012Db779973c86779dAcB2a486",
+      "0x9DfcB5f9e46c62835735Af9b249e437FCb276e1E",
+      "0x59092BeA53A1861ec445A611319bCEF03EF3245d",
+      "0x24A1DA60f419A0E9db709E151e6E6d00D341Db80",
+      "0x0E0bab764F38D63aBf08680A50b33718c98b90E6"
     ],
     "snapshot": 14048401
   }
